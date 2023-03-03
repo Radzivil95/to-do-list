@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do app</title>
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+</head>
+
+<body class="page">
+  <div class="wrapper">
+    <main class="main">
+      <div class="main__inner">
+        <aside class="sidebar">
+          <div class="sidebar__inner">
+            <img src="./assets/images/img/photo.webp" alt="photo" class="sidebar__photo">
+            <p class="sidebar__name">Vlad Radzivil</p>
+            <div class="sidebar__menu">
+              <span class="sidebar__menu-item"></span>
+              <span class="sidebar__menu-item"></span>
+              <span class="sidebar__menu-item"></span>
+            </div>
+          </div>
+          <button class="btn-reset sidebar__btn">Create task list</button>
+          <ul class="sidebar__task-list">
+            <li class="sidebar__task-item">First task</li>
+          </ul>
+        </aside>
+        <section class="workspace">
+          <div class="workspace__inner">
+            <p class="workspace__greeting"></p>
+            <div class="workspace__add-task">
+              <input class="input-reset workspace__input" type="text" placeholder="Add your to-do">
+              <button class="btn-reset workspace__add-btn"></button>
+            </div>
+            <ul class="workspace__task-list">
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+
+    </footer>
+  </div>
+  <script src="./assets/js/app.min.js"></script>
+</body>
+
+</html>

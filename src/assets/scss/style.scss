@@ -1,0 +1,11 @@
+// Settings
+@import "libs/reset";
+@import "libs/fonts";
+@import "global/variables";
+@import "global/settings";
+
+
+//sections
+@import "./sections/main";
+@import "./sections/sidebar";
+@import "./sections/workspace";

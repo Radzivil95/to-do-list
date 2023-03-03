@@ -1,0 +1,14 @@
+:root {
+    // base
+    --font-family: "Poppins", sans-serif;
+    --content-width: 1260px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+    // colors
+    --light-color: #ffffff;
+    --bg-color: #8AA6A3;
+    --dark-color: #10403B;
+    --accent-color: #127369;
+    --gray-color: #E4E3E3;
+}

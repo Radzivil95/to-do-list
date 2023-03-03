@@ -1,0 +1,11 @@
+.main {
+  &__inner {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    height: 800px;
+    width: 1200px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+  }
+}

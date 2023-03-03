@@ -1,0 +1,258 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* Removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+    --font-family: "Poppins", sans-serif;
+    --content-width: 1260px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --light-color: #ffffff;
+    --bg-color: #8AA6A3;
+    --dark-color: #10403B;
+    --accent-color: #127369;
+    --gray-color: #E4E3E3;
+}
+
+.page {
+    height: 100%;
+    font-family: var(--font-family, sans-serif);
+    font-weight: 400;
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
+    background-color: #E6EBE4;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-reset {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.input-reset::-webkit-search-decoration, .input-reset::-webkit-search-cancel-button, .input-reset::-webkit-search-results-button, .input-reset::-webkit-search-results-decoration {
+    display: none;
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.main__inner {
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    height: 800px;
+    width: 1200px;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+}
+
+.sidebar {
+    border-radius: inherit;
+    height: 800px;
+    background-color: var(--dark-color);
+    width: 400px;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.sidebar__photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.sidebar__title {
+    padding: 20px 0;
+    font-size: 24px;
+    text-align: center;
+    color: var(--light-color);
+    border-bottom: 1px solid var(--light-color);
+    margin-bottom: 30px;
+}
+
+.sidebar__btn {
+    position: relative;
+    display: block;
+    margin-left: 25px;
+    background-color: var(--accent-color);
+    height: 40px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--light-color);
+    margin-bottom: 30px;
+}
+
+.sidebar__btn::before {
+    position: absolute;
+    content: "";
+    background: url("../images/svg/add.svg") center center/cover no-repeat;
+    width: 24px;
+    height: 24px;
+    left: 15px;
+}
+
+.sidebar__inner {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sidebar__name {
+    color: var(--light-color);
+}
+
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.sidebar__menu-item {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--light-color);
+}
+
+.sidebar__task-list {
+    border-top: 1px solid #4C5958;
+    padding: 25px;
+}
+
+.sidebar__task-item {
+    color: var(--light-color);
+}
+
+.workspace__inner {
+    padding: 50px 100px;
+}
+
+.workspace__input {
+    border: 1px solid var(--gray-color);
+    width: 600px;
+    height: 50px;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.workspace__add-task {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.workspace__add-btn {
+    background: url("../images/svg/add.svg") center center/cover no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.workspace__greeting {
+    font-size: 30px;
+    color: var(--light-color);
+    margin-bottom: 30px;
+}
